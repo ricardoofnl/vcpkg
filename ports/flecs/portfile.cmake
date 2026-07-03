@@ -35,4 +35,12 @@ file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/usage" DESTINATION "${CURRENT_PACKAGES_D
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 
-vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")
+vcpkg_install_copyright(
+    FILE_LIST "${SOURCE_PATH}/LICENSE"
+    COMMENT [[
+The following source files include additional copyright and license notices:
+  src/addons/http/http.c
+  src/datastructures/hash.c
+  src/datastructures/strbuf.c
+]]
+)
